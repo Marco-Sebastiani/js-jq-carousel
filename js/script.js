@@ -2,6 +2,15 @@ $(document).ready(function(){
 
     $('.next').click(slideToRight);
     $('.prev').click(slideToLeft);
+    $(document).keydown(function(e){
+        if (e.which == 39){
+            slideToRight();
+        }
+        
+        if (e.which == 37){ 
+            slideToLeft();
+        }
+    });
 });
 
 
