@@ -6,10 +6,16 @@ $(document).ready(function(){
         if (e.which == 39){
             slideToRight();
         }
-        
+
         if (e.which == 37){ 
             slideToLeft();
         }
+    });
+
+    $('.nav i').click(function(){
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+        $('img').eq($(this).index()).addClass('active');
     });
 });
 
